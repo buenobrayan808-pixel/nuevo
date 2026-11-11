@@ -30,9 +30,11 @@ export class RegisterUser {
         const userData = new User({
             institucion: user.institucion,
             name: user.name,
+            tipo_usuario: user.tipo_usuario,
             genero: user.genero,
             email: user.email,
-            passwordHash: passwordData
+            passwordHash: passwordData,
+            activo: user.activo
 
         });
         console.log("soy el nombre del form", user.name);
