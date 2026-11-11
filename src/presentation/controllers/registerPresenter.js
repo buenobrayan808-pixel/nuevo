@@ -21,6 +21,7 @@ export class RegisterPresenter {
     async register(userData) {
 
         try {
+            
 
             await this.registerUser.execute(userData);
 

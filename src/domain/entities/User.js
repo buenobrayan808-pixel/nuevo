@@ -16,12 +16,16 @@ export class User {
 
     constructor({
         id = null,
+        institucion,
         name,
+        genero,
         email,
         passwordHash = null
     }) {
         this.id = id;
+        this.institucion = institucion;
         this.name = name;
+        this.genero = genero;
         this.email = email;
         this.passwordHash = passwordHash;
     }
