@@ -17,6 +17,9 @@ import { GetClasses } from "./domain/useCases/GetClasses.js";
 import { UpdateClass } from "./domain/useCases/UpdateClass.js";
 import { DeleteClass } from "./domain/useCases/DeleteClass.js";
 import { CreateClass } from "./domain/useCases/CreateClass.js";
+import {showHome} from "./presentation/views/home.js";
+import { renderNavbar } from "./presentation/components/navbar.js";
+import { showclassview} from "./presentation/views/classView.js"
 
 
 const passwordHasher = new PasswordHasher();
@@ -32,7 +35,22 @@ const passwordHasher = new PasswordHasher();
 //console.log("¿Coincide la contraseña?", resultado);
 
 const app = document.getElementById("app");
+const navbarcontainer = document.getElementById("navbar-container");
 
+
+renderNavbar(navbarcontainer, (view) => {
+
+    switch (view) {
+
+        case "home":
+            showHome(app);
+            break;
+
+        case "classes":
+            showclassview(app, classPresenter);
+            break;
+    }
+});
 /*
  * Repositorys
  */

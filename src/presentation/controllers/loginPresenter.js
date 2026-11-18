@@ -12,7 +12,7 @@
 import { showLoginMessage } from "../views/loginView.js";
 import { showRegisterView } from "../views/registerView.js";
 import { RegisterPresenter } from "./registerPresenter.js";
-import { showClassView } from "../views/classView.js";
+import {showHome} from "../views/home.js";
 
 export class LoginPresenter {
 
@@ -32,11 +32,15 @@ export class LoginPresenter {
                     credentials
                 );
             console.log("Usuario autenticado:",user);
-
+                /*
             showClassView(
                 this.container,
                 this.classPresenter
-            );
+            );*/
+
+                        showHome(
+                this.container,
+                this.classPresenter);
 
         } catch (error) {
 
