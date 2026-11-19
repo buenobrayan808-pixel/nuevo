@@ -21,7 +21,6 @@ import {showHome} from "./presentation/views/home.js";
 import { renderNavbar } from "./presentation/components/navbar.js";
 import { showclassview} from "./presentation/views/classView.js"
 import { showArquetectura,} from "./presentation/views/arquetectura.js"
-
 const passwordHasher = new PasswordHasher();
 
 //const password = "MiClave123";
